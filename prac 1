@@ -1,19 +1,19 @@
-Step 1 :- Installing DHCP Server 
-Run 
+Step 1 :- 
+Installing DHCP Server 
+Using dhcp install command.
 Command  :- sudo apt-get -y install isc-dhcp-server
-Now edit the file /etc/default/isc-dhcp-server to define the interfaces DHCPD should use to serve DHCP requests, with the INTERFACES option
-Command :- Change Interface Option (INTERFACES="eth0")
-Step 2 :- Configure DHCP Server
-After This We Have To Configure DHCP Server
+Step 2 :- 
+Configuring DHCP Server
 DHCP configuration file is present at /etc/dhcp/dhcpd.conf
 Open And Modify DHCP File
-sudo vi /etc/dhcp/dhcpd.conf
 Configure your dhcpd.conf by directly editing through a path 
 Command :- $sudo nano /etc/dhcp/dhcpd.conf
-Replace Ip Address Of dhcpd.conf with your ip address.
-To Know Your Ip Address 
+Step 3:-
+Change Ip Address Of dhcpd.conf with your IP address.
+Check Your IP address:
 Command :- ip addr OR ipconfig
-After Change Save And Exit
+Change Save And Exit.
+Step 4 :-
 Then to enable the services use the command
 Command :- $sudo systemctl enable isc-dhcp-server.service
 And Now Start The Service.
